@@ -30,9 +30,9 @@ is_male = {
 names = ['Оля', 'Петя', 'Вася', 'Маша']
 
 for name in names:
-    if is_male.get(name) == True:
+    if is_male.get(name):
         print(f"{name} : мужской ")
-    elif is_male.get(name) == False:
+    elif not is_male.get(name):
         print(f"{name} : женский ")       
     else:
         print(f"{name} : пол не определен ")
@@ -60,13 +60,11 @@ group_number = 1
 print(f"Всего групп: {len(groups)}")
 
 for line in groups:
-    print(f"Группа " + str(group_number)+ ": " + str(len(line)) + " ученика")
-    group_number +=1
+    print(f"Группа " + str(group_number) + ": " + str(len(line)) + " ученика")
+    group_number += 1
 
 
 print("------------------")
-
-
 
 # Задание 5
 # Для каждой пары учеников нужно с новой строки перечислить учеников, которые в неё входят
@@ -82,8 +80,8 @@ groups = [
 group_number = 1
 
 for line in groups:
-    str_line=", ".join(line)
-    print(f"Группа " + str(group_number)+ ": " + str_line)
-    group_number +=1
+    str_line = ", ".join(line)
+    print(f"Группа " + str(group_number) + ": " + str_line)
+    group_number += 1
 
 print("------------------")
