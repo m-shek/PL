@@ -16,7 +16,7 @@ list_dict = [
      {'name': 'Эдуард', 'age': '48', 'job': 'Big boss'}
 ]
 
-with open('export.csv', 'w', encoding='utf-8',newline='') as f:
+with open('files_output\\export.csv', 'w', encoding='utf-8',newline='') as f:
      fields = list_dict[0].keys()
      print(fields)
      writer = csv.DictWriter(f, fields)
