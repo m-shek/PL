@@ -110,5 +110,29 @@ is_male = {
     'Олег': True,
     'Миша': True,
 }
+statistic = []
+for class_num in school:
+    school_class = class_num['students']
+    count_men = 0
+    count_women = 0
+    for student in school_class:
+        student_name = student['first_name']
+        for gender in is_male:
+            if student_name == gender:
+                if is_male.get(gender):
+                    count_men += 1
+                elif not is_male.get(gender):
+                    count_women += 1
+    statistic.append({"class": class_num['class'], "count_men": count_men, "count_women": count_women})
 
-# ???
+gender_men = 0
+gender_women = 0
+for gender_count in statistic:
+    if gender_count['count_men'] >= gender_men:
+        gender_men = gender_count['count_men']
+        class_more_men = gender_count['class']
+    if gender_count['count_women'] >= gender_women:
+        gender_women = gender_count['count_women']
+        class_more_women = gender_count['class']
+print(f'Девочек больше в  классе  {class_more_women} , кол-во {gender_women}')
+print(f'Мальчиков больше в  классе  {class_more_men} , кол-во {gender_men}')
