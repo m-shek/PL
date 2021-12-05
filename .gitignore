@@ -2,7 +2,7 @@ settings.py
 *.files_output
 *.log
 .vscode/
-venv/
+env/
 .idea/
 enb/
 .DS_Store
