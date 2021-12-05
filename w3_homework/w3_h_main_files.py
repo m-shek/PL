@@ -6,11 +6,10 @@
 Сохраните результат в файл referat2.txt
 """
 
-from os import pipe
-content =''
-line_words =[]
+content = ''
+line_words = []
 line_len = 0
-text =[]
+text = []
 
 with open('files_input\\referat.txt', 'r', encoding='utf-8') as myfile:
     for line in myfile:
